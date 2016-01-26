@@ -27,7 +27,10 @@
 #ifndef G2O_ROBUST_KERNEL_H
 #define G2O_ROBUST_KERNEL_H
 
-#ifdef _MSC_VER
+// Necessary to include a standard header in order to define _LIBCPP_VERSION.
+#include <new>
+
+#if defined(_MSC_VER) || defined(__GXX_EXPERIMENTAL_CXX0X__) || defined(_LIBCPP_VERSION)
 #include <memory>
 #else
 #include <tr1/memory>
