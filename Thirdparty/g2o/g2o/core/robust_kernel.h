@@ -34,6 +34,7 @@
 #endif
 #include <Eigen/Core>
 
+#include "hash_map.h"
 
 namespace g2o {
 
@@ -74,7 +75,7 @@ namespace g2o {
     protected:
       double _delta;
   };
-  typedef std::tr1::shared_ptr<RobustKernel> RobustKernelPtr;
+  typedef G2O_HASH_NAMESPACE::shared_ptr<RobustKernel> RobustKernelPtr;
 
 } // end namespace g2o
 

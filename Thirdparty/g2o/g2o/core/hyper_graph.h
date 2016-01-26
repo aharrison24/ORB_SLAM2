@@ -35,12 +35,7 @@
 #include <limits>
 #include <cstddef>
 
-#ifdef _MSC_VER
-#include <unordered_map>
-#else
-#include <tr1/unordered_map>
-#endif
-
+#include "hash_map.h"
 
 /** @addtogroup graph */
 //@{
@@ -87,11 +82,11 @@ namespace g2o {
         virtual HyperGraphElementType elementType() const = 0;
       };
 
-      typedef std::set<Edge*>                           EdgeSet;
-      typedef std::set<Vertex*>                         VertexSet;
+      typedef std::set<Edge*>                                  EdgeSet;
+      typedef std::set<Vertex*>                                VertexSet;
 
-      typedef std::tr1::unordered_map<int, Vertex*>     VertexIDMap;
-      typedef std::vector<Vertex*>                      VertexContainer;
+      typedef G2O_HASH_NAMESPACE::unordered_map<int, Vertex*>  VertexIDMap;
+      typedef std::vector<Vertex*>                             VertexContainer;
 
       //! abstract Vertex, your types must derive from that one
       class  Vertex : public HyperGraphElement {
