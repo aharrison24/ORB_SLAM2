@@ -145,6 +145,7 @@ g2o/core/sparse_block_matrix.h
 g2o/core/sparse_optimizer.cpp  
 g2o/core/sparse_block_matrix.hpp
 g2o/core/sparse_optimizer.h
+g2o/core/hash_map.h
 g2o/core/hyper_dijkstra.cpp 
 g2o/core/hyper_dijkstra.h
 g2o/core/parameter_container.cpp     
