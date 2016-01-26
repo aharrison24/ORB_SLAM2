@@ -84,9 +84,9 @@ configure_file(config.h.in ${g2o_SOURCE_DIR}/config.h)
 
 # Set up the top-level include directories
 INCLUDE_DIRECTORIES(
-${g2o_SOURCE_DIR}/core
-${g2o_SOURCE_DIR}/types
-${g2o_SOURCE_DIR}/stuff 
+${g2o_SOURCE_DIR}/g2o/core
+${g2o_SOURCE_DIR}/g2o/types
+${g2o_SOURCE_DIR}/g2o/stuff
 ${G2O_EIGEN3_INCLUDE})
 
 # Include the subdirectories
